@@ -1,0 +1,24 @@
+{
+  "name": "as-install-panel",
+  "version": "1.0.0",
+  "description": "套件安裝處理程式",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASAllenShih/as-install-panel.git"
+  },
+  "author": "AS_Allen_Shih",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASAllenShih/as-install-panel/issues"
+  },
+  "homepage": "https://github.com/ASAllenShih/as-install-panel#readme",
+  "dependencies": {
+    "fix-esm": "^1.0.1",
+    "inquirer": "^9.2.13",
+    "node-fetch": "^3.3.2"
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"update": true,
+	"pip": true,
+	"npm": true,
+	"list": "https://allen.asallenshih.tw/api/?type=dependencies&ver=v1",
+	"execpath": "./"
+}
