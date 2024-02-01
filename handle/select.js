@@ -12,12 +12,20 @@ if (getConfig('npm')) {
 }
 sourceList.push('退出');
 async function select() {
+	console.log(`安裝路徑：${execpath}`);
 	const { source } = await inquirer.prompt([
 		{
-			type: 'list',
+			type: 'input',
 			name: 'source',
-			message: '請選擇安裝來源',
+			message: '請輸入安裝來源或行為(Enter查看符合的選項)',
 			choices: sourceList,
+			async validate(input) {
+				if (sourceList.includes(input)) {
+					return true;
+				}
+				const option = sourceList.filter((item) => item.includes(input)).sort().join('、');
+				return `請輸入安裝來源或行為。依目前輸入可選的有：${option}`;
+			},
 		},
 	]);
 	if (source == '退出') {
